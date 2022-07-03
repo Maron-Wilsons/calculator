@@ -1,0 +1,105 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+background-color: black;
+
+}
+
+.App{
+display: flex;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+}
+
+.calculator{
+width: 100%;
+color: #fff;
+max-width: 400px;
+background-color: aliceblue;
+border-radius: 16px;
+
+overflow: hidden;
+animation: dist 5s infinite forwards;
+}
+
+@keyframes dist {
+0%{
+  box-shadow: 0px 2px 64px rgb(255, 0, 149);
+}
+20%{
+  box-shadow: 0px 2px 64px rgb(4, 235, 247);
+}
+40%{
+  box-shadow: 0px 2px 64px rgb(0, 255, 183);
+}
+60%{
+  box-shadow: 0px 2px 64px rgb(2, 209, 182);
+}
+80%{
+  box-shadow: 0px 2px 64px rgb(0, 255, 128);
+}
+100%{
+  box-shadow: 0px 2px 64px rgb(255, 0, 247);
+}
+120%{
+  box-shadow: 0px 2px 64px rgb(0, 255, 166);
+}
+}
+
+.display{
+padding: 16px;
+text-align: right;
+background-color: rgb(8, 9, 24);
+font-size: 24px;
+font-weight: 300;
+}
+
+.display span {
+  font-size: 14px;
+  padding: 5px;
+  color: rgb(0, 255, 217);
+}
+
+button {
+appearance: none;
+border: none;
+outline: none;
+color: #fff;
+font-size: 16px ;
+padding: 16px;
+cursor: pointer;
+transition: 0.4s;
+}
+
+button:hover{
+opacity: 0.9;
+
+}
+
+.operators{
+display: flex;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  background-color: rgb(255, 4, 100);
+}
+
+.digints{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.digints button {
+flex: 1 1 33.333%;
+background-color: rgb(8, 9, 24);
+animation: dizing  10s infinite forwards;
+}
+
+

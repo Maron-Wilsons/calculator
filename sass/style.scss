@@ -1,0 +1,48 @@
+// sass - это препроцессор для языка css, блогодоря ему мы можем писсать на языке css стили намного быстрее,
+// причем используя различные перемены, циклы функции наследование , и многое другое 
+@import url('./_vilist.scss');
+
+
+$bgColor: hsl(104, 81%, 53%); // перемерные указывается через $
+$colorBg: red;
+$blockWidth: 300px;
+$border: 4px solid rgb(0, 51, 255);
+$list: none;
+*{
+padding: 0;
+margin: 0;
+}
+.block:not(.first){ // оброщаюсь ко всем элементам div block у котороых нету сласса first 
+background: $bgColor;
+width: $blockWidth;
+height: 200px;
+margin-bottom: 20px;
+border: $border;
+}
+
+.first{
+background: $colorBg;
+height: 100px;
+margin-bottom: 20px;
+width: $blockWidth;
+border: $border;
+}
+
+#centrel-block{
+padding: 30px;
+ul{//вложеные стили это когда внутри одного блока, мы можем прописать стили для других блоков 
+list-style: $list;
+display: inline-block;
+li{
+    float: left;
+    margin-right: 20px;
+    a{
+        color: red;
+    }
+}
+}
+}
+
+// #centrel-block > ul{
+// list-style: none;
+// }
